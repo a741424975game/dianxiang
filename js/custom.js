@@ -83,7 +83,7 @@
 //<![CDATA[
     $(window).load(function () { // makes sure the whole site is loaded
         $("#status").delay(2000).fadeOut(); // will first fade out the loading animation
-        $("#preloader").delay(2000).fadeOut(4000); // will fade out the white DIV that covers the website.
+        $("#preloader").delay(2000).fadeOut(3000); // will fade out the white DIV that covers the website.
     })
 //]]>
 

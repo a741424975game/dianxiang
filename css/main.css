@@ -391,7 +391,7 @@ header {
 }
 
 .navbar-wrapper {
-    margin-top: 0px;
+    margin-top: 0;
     height: 80px;
     position: relative;
     z-index: 15;
