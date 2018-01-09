@@ -102,10 +102,6 @@ jQuery(
                         $('.closeMenu').children().css(
                             "color","#fff"
                         );
-                        // $('.menuItem.active').children().css({
-                        //     "background-color": "#fff", "color": "#000"
-                        // })
-
                     } else {
                         $('.stuckMenu').removeClass('isStuck');
                         $('.closeMenu').css(
