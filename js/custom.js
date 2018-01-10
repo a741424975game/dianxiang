@@ -157,36 +157,6 @@
         });
     });
 
-
-// Testimonial slider
-// $(window).load(function(){
-//   $('.flexslider').flexslider({
-// 	animation: "fade",
-// 	animationLoop: true,
-// 	slideshow: true,
-// 	pauseOnAction: false,
-// 	slideshowSpeed: 7000,
-// 	controlNav: true,
-// 	start: function(slider){
-// 	  $('body').removeClass('loading');
-// 	}
-//   });
-// });
-
-
-// we worked slider
-//     $(window).load(function () {
-//         $('.worklogo').flexslider({
-//             animation: "slide",
-//             slideshow: false,
-//             itemWidth: 210,
-//             itemMargin: 5,
-//
-//         });
-//     });
-
-// Skill set
-
 //Round Play
     $(function () {
 
@@ -197,9 +167,7 @@
             items: {
                 visible: 1,
                 width: 1920,
-                height: 1080,
-                marginTop: 0,
-                marginLeft: 0
+                height: 1080
             },
             scroll: {
                 fx: 'fade',
@@ -207,19 +175,40 @@
                 duration: dur,
                 timeoutDuration: pDur,
                 onBefore: function (data) {
+                    data.items.visible.first().addClass('trans')
                 },
                 onAfter: function (data) {
-                    data.items.old.find('img').stop().css({
-                        width: 1920,
-                        height: 1080,
-                        marginTop: 0,
-                        marginLeft: 0
-                    });
+                    $(this).children().last().removeClass('trans')
                 }
             },
             onCreate: function (data) {
+                $(this).children().first().addClass('trans')
             }
         });
+
+        function animate(item, dur) {
+            var obj = {
+                width: 1920 * 1.2,
+                height: 1080 * 1.2
+            };
+            switch (Math.ceil(Math.random() * 2)) {
+                case 1:
+                    obj.marginTop = 0;
+                    break;
+                case 2:
+                    obj.marginTop = -120;
+                    break;
+            }
+            switch (Math.ceil(Math.random() * 2)) {
+                case 1:
+                    obj.marginLeft = 0;
+                    break;
+                case 2:
+                    obj.marginLeft = -200;
+                    break;
+            }
+            item.animate(obj, dur, 'linear');
+        }
 
     });
 

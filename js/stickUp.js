@@ -110,9 +110,6 @@ jQuery(
                         $('.closeMenu').children().css(
                             "color","#000"
                         );
-                        // $('.menuItem.active').children().css({
-                        //     "background-color": "#000", "color": "#fff"
-                        // })
                     }
                     if (vartop < varscroll + topMargin) {
                         $('.stuckMenu').next().closest('div').css({

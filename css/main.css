@@ -196,7 +196,7 @@ header {
 
 .menu-title {
     font-weight: bold !important;
-    font-size: 16px !important;
+    font-size: 11px !important;
 }
 
 .active-menu-title {
@@ -411,15 +411,11 @@ header {
 .img-wrapper div {
     width: 100%;
     overflow: hidden;
-    display: inline-block;
 }
 
-.carousel img {
-    transition: all 8s;
-}
-
-.carousel img:hover {
-    transform: scale(1.4);
+.carousel img.trans {
+    transition: all 16s;
+    transform: scale(1.5);
 }
 
 .navbar-wrapper .container {
