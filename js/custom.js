@@ -165,7 +165,7 @@
     });
 
     function BannerCnReturn() {
-        $('.banner-img.banner-img-cn').stop().delay(1000).animate({'margin-top': -1009}, 1000, addBannerEn);
+        $('.banner-img.banner-img-cn').delay(1000).animate({'margin-top': -1009}, 1000, addBannerEn);
     }
 
     function addBannerEn() {
