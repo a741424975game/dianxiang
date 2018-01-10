@@ -83,7 +83,7 @@
 //<![CDATA[
     $(window).load(function () { // makes sure the whole site is loaded
         $("#status").delay(2000).fadeOut(); // will first fade out the loading animation
-        $("#preloader").delay(2000).fadeOut(3000); // will fade out the white DIV that covers the website.
+        $("#preloader").delay(2000).fadeOut(6000); // will fade out the white DIV that covers the website.
     })
 //]]>
 
@@ -155,38 +155,6 @@
                 }
             }
         });
-    });
-
-//Round Play
-    $(function () {
-
-        var dur = 5000;
-        var pDur = 5000;
-
-        $('.carousel').carouFredSel({
-            items: {
-                visible: 1,
-                width: 1920,
-                height: 1080
-            },
-            scroll: {
-                fx: 'fade',
-                easing: 'swing',
-                duration: dur,
-                timeoutDuration: pDur,
-                onBefore: function (data) {
-                    data.items.visible.removeClass('trans')
-                },
-                onAfter: function (data) {
-                    data.items.visible.addClass('trans');
-
-                }
-            },
-            onCreate: function (data) {
-                $(this).children().first().addClass('trans')
-            }
-        });
-
     });
 
 

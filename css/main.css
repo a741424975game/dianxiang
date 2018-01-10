@@ -356,14 +356,6 @@ header {
     color: #fff;
 }
 
-.isStuck .navbar.navbar-inverse.navbar-static-top a.closeMenu {
-    border-color: #000;
-}
-
-.isStuck .navbar.navbar-inverse.navbar-static-top a.closeMenu i {
-    color: #000;
-}
-
 .navbar-header {
     display: none;
 }

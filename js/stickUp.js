@@ -96,20 +96,8 @@ jQuery(
                 if ($(window).width() > 500) {
                     if ($('.menuItem.active').children()[0].id !== 'home') {
                         $('.stuckMenu').addClass('isStuck');
-                        $('.closeMenu').css(
-                            "border-color","#fff"
-                        );
-                        $('.closeMenu').children().css(
-                            "color","#fff"
-                        );
                     } else {
                         $('.stuckMenu').removeClass('isStuck');
-                        $('.closeMenu').css(
-                            "border-color","#000"
-                        );
-                        $('.closeMenu').children().css(
-                            "color","#000"
-                        );
                     }
                     if (vartop < varscroll + topMargin) {
                         $('.stuckMenu').next().closest('div').css({
