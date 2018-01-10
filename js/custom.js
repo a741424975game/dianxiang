@@ -160,8 +160,8 @@
 //Round Play
     $(function () {
 
-        var dur = 3000;
-        var pDur = 3000;
+        var dur = 5000;
+        var pDur = 5000;
 
         $('.carousel').carouFredSel({
             items: {
@@ -171,44 +171,21 @@
             },
             scroll: {
                 fx: 'fade',
-                easing: 'linear',
+                easing: 'swing',
                 duration: dur,
                 timeoutDuration: pDur,
                 onBefore: function (data) {
-                    data.items.visible.first().addClass('trans')
+                    data.items.visible.removeClass('trans')
                 },
                 onAfter: function (data) {
-                    $(this).children().last().removeClass('trans')
+                    data.items.visible.addClass('trans');
+
                 }
             },
             onCreate: function (data) {
                 $(this).children().first().addClass('trans')
             }
         });
-
-        function animate(item, dur) {
-            var obj = {
-                width: 1920 * 1.2,
-                height: 1080 * 1.2
-            };
-            switch (Math.ceil(Math.random() * 2)) {
-                case 1:
-                    obj.marginTop = 0;
-                    break;
-                case 2:
-                    obj.marginTop = -120;
-                    break;
-            }
-            switch (Math.ceil(Math.random() * 2)) {
-                case 1:
-                    obj.marginLeft = 0;
-                    break;
-                case 2:
-                    obj.marginLeft = -200;
-                    break;
-            }
-            item.animate(obj, dur, 'linear');
-        }
 
     });
 

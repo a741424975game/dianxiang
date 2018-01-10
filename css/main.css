@@ -414,8 +414,9 @@ header {
 }
 
 .carousel img.trans {
-    transition: all 16s;
-    transform: scale(1.5);
+    transition: all 20s;
+    transform: scale(2);
+    opacity: 0;
 }
 
 .navbar-wrapper .container {
