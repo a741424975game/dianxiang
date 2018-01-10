@@ -157,6 +157,21 @@
         });
     });
 
+// Banner img
+    $('.banner-img.banner-img-en').mouseenter(function () {
+        $(this).removeClass('banner-img-en');
+        $(this).prev().animate({'margin-top': 0, 'margin-bottom': 25}, 1000, BannerCnReturn);
+
+    });
+
+    function BannerCnReturn() {
+        $('.banner-img.banner-img-cn').stop().delay(1000).animate({'margin-top': -1009}, 1000, addBannerEn);
+    }
+
+    function addBannerEn() {
+        $('.banner-img.banner-img-cn').stop().next().addClass('banner-img-en')
+    }
+
 
 }(jQuery));
 

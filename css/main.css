@@ -194,6 +194,10 @@ header {
     position: relative;
 }
 
+.nav-container {
+    width: 100%;
+}
+
 .menu-title {
     font-weight: bold !important;
     font-size: 11px !important;
@@ -245,6 +249,10 @@ header {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
     filter: alpha(opacity=80);
     opacity: 0.8;
+}
+
+.banner-img.banner-img-cn {
+    margin-top: -1031px;
 }
 
 .bannerText {
@@ -322,7 +330,7 @@ header {
     text-align: center;
     font-weight: normal;
     position: absolute;
-    left: 0;
+    left: 30px;
     top: 20px;
     padding: 0;
 }
@@ -335,7 +343,7 @@ header {
     color: #fff;
     font-weight: normal;
     position: absolute;
-    right: 0;
+    right: 30px;
     top: 20px;
     padding: 0;
     margin: -webkit-border-radius: 50%;
@@ -478,7 +486,6 @@ header {
     width: 42px;
     height: 32px;
     text-align: center;
-    background: #5b4c5c;
     position: fixed;
     left: 50%;
     margin-left: -21px;
