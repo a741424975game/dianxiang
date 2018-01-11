@@ -2,11 +2,6 @@
     var bannerImgCnMT;
     var bannerImgAnimated = false;
     $(document).ready(function () {
-        $('.banner-img.banner-img-cn').css({'margin-top': 0});
-        bannerImgCnMT = -$('.banner-img.banner-img-cn').offset().top * 2 - 20;
-        $('.banner-img.banner-img-cn').css(
-            {'margin-top': bannerImgCnMT});
-
         $('.slide').prepend('<div class="patternOverlay"></div>');
 
         $('.skillbar').each(function () {
@@ -60,17 +55,16 @@
     // menu
     function resize_menu() {
         $('.banner-img.banner-img-cn').css({'margin-top': 0});
-        bannerImgCnMT = -$('.banner-img.banner-img-cn').offset().top * 2 - 20;
+        bannerImgCnMT = -$('.banner-img.banner-img-cn').offset().top * 2 - 35;
         if (bannerImgAnimated) {
             $('.banner-img.banner-img-cn').css(
-            {'margin-top': bannerImgCnMT + 20});
-            bannerImgCnMT = bannerImgCnMT + 20;
+            {'margin-top': bannerImgCnMT - 15});
         } else {
             $('.banner-img.banner-img-cn').css(
             {'margin-top': bannerImgCnMT});
-            bannerImgCnMT = bannerImgCnMT + 20;
         }
 
+        bannerImgCnMT = bannerImgCnMT + 30;
 
         var stickyHeight = parseInt($('.navbar-wrapper').height());
         var stickyMarginB = parseInt($('.navbar-wrapper').css('margin-bottom'));
