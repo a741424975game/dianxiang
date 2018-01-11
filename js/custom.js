@@ -1,6 +1,5 @@
 (function ($) {
     var bannerImgCnMT;
-    var bannerImgAnimated = false;
     $(document).ready(function () {
         $('.slide').prepend('<div class="patternOverlay"></div>');
 
@@ -55,17 +54,9 @@
     // menu
     function resize_menu() {
         $('.banner-img.banner-img-cn').css({'margin-top': 0});
-        bannerImgCnMT = -$('.banner-img.banner-img-cn').offset().top * 2 - 35;
-        if (bannerImgAnimated) {
-            $('.banner-img.banner-img-cn').css(
-            {'margin-top': bannerImgCnMT - 15});
-        } else {
-            $('.banner-img.banner-img-cn').css(
+        bannerImgCnMT = -$('.banner-img.banner-img-cn').offset().top * 2 - 70;
+        $('.banner-img.banner-img-cn').css(
             {'margin-top': bannerImgCnMT});
-        }
-
-        bannerImgCnMT = bannerImgCnMT + 30;
-
         var stickyHeight = parseInt($('.navbar-wrapper').height());
         var stickyMarginB = parseInt($('.navbar-wrapper').css('margin-bottom'));
         var currentMarginT = parseInt($('.navbar-wrapper').next().closest('div').css('margin-top'));
@@ -173,10 +164,9 @@
 // Banner img
     var bannerImgCnMoved = false;
     $('.banner-img.banner-img-en').mouseenter(function () {
-        bannerImgAnimated = true;
         if (!bannerImgCnMoved) {
             bannerImgCnMoved = true;
-            $(this).prev().animate({'margin-top': 0, 'margin-bottom': 25}, 1000,
+            $(this).prev().animate({'margin-top': 0}, 1000,
                 function () {
                     $('.banner-img.banner-img-cn').delay(1000).animate(
                         {'margin-top': bannerImgCnMT}, 1000,
